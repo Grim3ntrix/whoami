@@ -1983,3 +1983,12 @@ html[data-theme="light"] .top.is-scrolled {
 .project-actions {
   padding-top: 18px;
 }
+
+
+/* Improved readability for project and experience descriptions */
+
+.project-card > p,
+.timeline-item p {
+  font-size: 15px;
+  line-height: 1.7;
+}
