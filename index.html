@@ -14,33 +14,48 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="top" id="top">
     <div class="wrap top-inner">
-      <a class="who" href="#about" aria-label="Richard Samberi — Back to About">
+      <a class="who" href="#home" aria-label="Richard Samberi — Back to home">
         <img src="assets/logo-dark.svg"
          data-dark="assets/logo-dark.svg"
          data-light="assets/logo-light.svg"
          alt="" aria-hidden="true">
-        <span>Richard Samberi</span></a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation">
+        <span>Richard Samberi</span>
+      </a>
+
+      <button class="nav-toggle" type="button"
+        aria-expanded="false"
+        aria-controls="primary-nav"
+        aria-label="Open navigation">
         <span></span><span></span><span></span>
       </button>
+
       <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#certifications">Certifications</a>
-        <a href="#games">Games</a>
-        <a href="#contact">Contact</a>
-        <button class="theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="false">
-          <span class="theme-toggle-icon" aria-hidden="true">☼</span><span class="theme-toggle-label">Light mode</span>
+        <div class="nav-group nav-group-work">
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+        </div>
+
+        <div class="nav-group nav-group-profile">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#education">Education</a>
+          <a href="#certifications">Certifications</a>
+          <a href="#games">Games</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <button class="theme-toggle" type="button"
+          aria-label="Switch to light theme"
+          aria-pressed="false">
+          <span class="theme-toggle-icon" aria-hidden="true">☼</span>
+          <span class="theme-toggle-label">Light mode</span>
         </button>
       </nav>
     </div>
   </header>
 
   <main id="main">
-    <section class="hero section-shell" id="about" aria-labelledby="hero-title">
+    <section class="hero section-shell" id="home" aria-labelledby="hero-title">
       <div class="hero-copy">
         <p class="eyebrow"><span class="status-dot"></span> AVAILABLE FOR NEW PROJECTS </p>
         <h1 id="hero-title">Building ideas<br>into <span class="accent-text">something real.</span></h1>
@@ -74,11 +89,6 @@
       <p>CURIOUS BY NATURE. <span>CREATIVE BY PRACTICE.</span></p><span class="strip-mark">✳</span>
     </section>
 
-    <section class="content-section section-shell" id="skills">
-      <div class="section-heading"><p class="eyebrow">01 / CAPABILITIES</p><h2>Skills<span class="accent-text">.</span></h2></div>
-      <div class="section-body"><p class="section-lead">The tools, technologies, and strengths I bring to the table.</p><div class="placeholder-grid"><article class="placeholder-card"><span>01</span><h3>Technical skills</h3><p>Add languages, frameworks, platforms, and tools.</p></article><article class="placeholder-card"><span>02</span><h3>Creative skills</h3><p>Add design, communication, and creative abilities.</p></article><article class="placeholder-card"><span>03</span><h3>Other strengths</h3><p>Add relevant strengths and areas of expertise.</p></article></div></div>
-    </section>
-
     <section class="content-section section-shell" id="projects">
       <div class="section-heading"><p class="eyebrow">02 / SELECTED WORK</p><h2>Projects<span class="accent-text">.</span></h2></div>
       <div class="section-body"><p class="section-lead">A selection of things I've built, explored, or contributed to.</p><div class="project-grid"><article class="project-card"><div class="project-visual visual-one"><span>PROJECT 01</span><b>01</b></div><div class="project-meta"><h3>Project title</h3><span>YEAR</span></div><p>Write a concise description of the project, the problem it solves, and your contribution.</p><div class="tag-list"><span>TECHNOLOGY</span><span>DESIGN</span></div></article><article class="project-card"><div class="project-visual visual-two"><span>PROJECT 02</span><b>02</b></div><div class="project-meta"><h3>Project title</h3><span>YEAR</span></div><p>Write a concise description of the project, the problem it solves, and your contribution.</p><div class="tag-list"><span>DEVELOPMENT</span><span>RESEARCH</span></div></article></div></div>
@@ -87,6 +97,46 @@
     <section class="content-section section-shell" id="experience">
       <div class="section-heading"><p class="eyebrow">03 / CAREER</p><h2>Experience<span class="accent-text">.</span></h2></div>
       <div class="section-body"><p class="section-lead">A timeline of professional roles, freelance work, and meaningful contributions.</p><div class="timeline-item"><span class="timeline-date">YEAR — PRESENT</span><div><h3>Position or role</h3><p class="muted">Company or organization · Location</p><p>Describe your responsibilities, contributions, and measurable results.</p></div></div><div class="timeline-item"><span class="timeline-date">YEAR — YEAR</span><div><h3>Previous position</h3><p class="muted">Company or organization · Location</p><p>Add another relevant experience when ready.</p></div></div></div>
+    </section>
+
+    <section class="content-section section-shell" id="about">
+      <div class="section-heading">
+        <p class="eyebrow">03 / ABOUT</p>
+        <h2>About<span class="accent-text">.</span></h2>
+      </div>
+
+      <div class="section-body">
+        <p class="section-lead">
+          A little more about the person behind the work, their background,
+          interests, and approach to building meaningful things.
+        </p>
+
+        <div class="placeholder-grid">
+          <article class="placeholder-card">
+            <span>01 / BACKGROUND</span>
+            <h3>Who I am</h3>
+            <p>
+              Add a short introduction about yourself, your background,
+              and your journey into technology.
+            </p>
+          </article>
+
+          <article class="placeholder-card">
+            <span>02 / APPROACH</span>
+            <h3>How I think</h3>
+            <p>
+              Share your approach to problem-solving, learning,
+              collaboration, and creating useful solutions.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="content-section section-shell" id="skills">
+      <div class="section-heading"><p class="eyebrow">01 / CAPABILITIES</p><h2>Skills<span class="accent-text">.</span></h2></div>
+      <div class="section-body"><p class="section-lead">The tools, technologies, and strengths I bring to the table.</p><div class="placeholder-grid"><article class="placeholder-card"><span>01</span><h3>Technical skills</h3><p>Add languages, frameworks, platforms, and tools.</p></article><article class="placeholder-card"><span>02</span><h3>Creative skills</h3><p>Add design, communication, and creative abilities.</p></article><article class="placeholder-card"><span>03</span><h3>Other strengths</h3><p>Add relevant strengths and areas of expertise.</p></article></div></div>
     </section>
 
     <section class="content-section section-shell" id="education">
@@ -161,11 +211,12 @@
   </main>
 
   <footer class="site-footer section-shell">
-    <a class="wordmark" href="#top" aria-label="Richard Samberi — Back to top">
+    <a class="wordmark" href="#home" aria-label="Richard Samberi — Back to home">
       <img src="assets/logo-dark.svg"
-       data-dark="assets/logo-dark.svg"
-       data-light="assets/logo-light.svg"
-       alt="" aria-hidden="true">Richard Samberi<span>.</span>
+           data-dark="assets/logo-dark.svg"
+           data-light="assets/logo-light.svg"
+           alt="" aria-hidden="true">
+      Richard Samberi<span>.</span>
     </a>
     <p>To God be all the Glory and Honor</p><small>© 2026 RICHARD SAMBERI. ALL RIGHTS RESERVED.</small>
   </footer>

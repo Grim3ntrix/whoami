@@ -1699,7 +1699,7 @@ html[data-theme="light"] .top.is-scrolled {
   min-height: 52px;
   padding-inline: 21px;
   gap: 13px;
-  font-size: 12px;
+  font-size: 13px;
   letter-spacing: 0.02em;
 }
 
@@ -1769,4 +1769,97 @@ html[data-theme="light"] .top.is-scrolled {
   .hero-note {
     margin-top: 24px;
   }
+}
+
+/* ==========================================================================
+   HEADER NAVIGATION GROUPS
+   ========================================================================== */
+
+.primary-nav {
+  flex: 1;
+  justify-content: flex-start;
+  gap: 0;
+}
+
+.nav-group {
+  display: flex;
+  align-items: center;
+  gap: clamp(10px, 1.25vw, 18px);
+}
+
+.nav-group-profile {
+  margin-left: auto;
+}
+
+.primary-nav .theme-toggle {
+  flex: 0 0 auto;
+  margin-left: clamp(18px, 2.5vw, 34px);
+}
+
+/* Keep the grouped navigation compact on narrower desktop screens. */
+@media (min-width: 1101px) and (max-width: 1250px) {
+  .nav-group {
+    gap: 11px;
+  }
+
+  .primary-nav a {
+    font-size: 10px;
+  }
+
+  .primary-nav .theme-toggle {
+    margin-left: 18px;
+  }
+}
+
+/* Keep both navigation groups inside the existing mobile dropdown. */
+@media (max-width: 1100px) {
+  .primary-nav {
+    flex: initial;
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .nav-group {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .nav-group-profile {
+    margin-left: 0;
+  }
+
+  .primary-nav a {
+    width: 100%;
+  }
+
+  .primary-nav .theme-toggle {
+    width: 100%;
+    justify-content: flex-start;
+    margin: 12px 0 0;
+    padding: 14px 0 8px;
+    border-top: 1px solid var(--line-soft);
+  }
+}
+
+/* ==========================================================================
+   MOBILE NAVIGATION — GROUP SEPARATOR
+   ========================================================================== */
+
+@media (max-width: 1100px) {
+  .primary-nav .nav-group-work a:last-child {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .primary-nav .nav-group-profile a:last-child {
+    border-bottom: 0;
+  }
+}
+
+.site-footer .wordmark {
+  display: inline-flex;
+  align-self: flex-start;
+  width: fit-content;
+  max-width: max-content;
 }

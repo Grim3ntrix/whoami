@@ -127,34 +127,44 @@
 
   // Active navigation section.
   const sectionLinks = [...document.querySelectorAll('.primary-nav a[href^="#"]')];
+  const homeSection = document.querySelector('#home');
+
+  function clearActiveSection() {
+    sectionLinks.forEach(link => {
+      link.classList.remove('is-active');
+      link.removeAttribute('aria-current');
+    });
+  }
 
   if ('IntersectionObserver' in window) {
     const sectionObserver = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (!entry.isIntersecting) return;
 
+        // The hero is the introduction, not a dedicated navigation section.
+        if (entry.target.id === 'home') {
+          clearActiveSection();
+          return;
+        }
+
         sectionLinks.forEach(link => {
           const active = link.getAttribute('href') === `#${entry.target.id}`;
 
           link.classList.toggle('is-active', active);
 
-          if (active) {
-            link.setAttribute('aria-current', 'location');
-          } else {
-            link.removeAttribute('aria-current');
-          }
+          if (active) link.setAttribute('aria-current', 'location');
+          else link.removeAttribute('aria-current');
         });
       });
-    }, {
-      rootMargin: '-25% 0px -60% 0px',
-      threshold: 0
-    });
+    }, { rootMargin: '-25% 0px -60% 0px', threshold: 0 });
 
     sectionLinks.forEach(link => {
       const section = document.getElementById(link.hash.slice(1));
-
       if (section) sectionObserver.observe(section);
     });
+
+    // Also observe the hero so the active navigation line disappears at the top.
+    if (homeSection) sectionObserver.observe(homeSection);
   }
 
   // Header border and back-to-top visibility.
