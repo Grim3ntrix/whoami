@@ -1863,3 +1863,123 @@ html[data-theme="light"] .top.is-scrolled {
   width: fit-content;
   max-width: max-content;
 }
+
+
+/* ==========================================================================
+   PROJECT CARDS — SPACING AND ALIGNMENT
+   ========================================================================== */
+
+.project-grid {
+  align-items: stretch;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project-meta {
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.project-meta h3 {
+  min-height: 2.7em;
+  line-height: 1.25;
+}
+
+.project-card > p {
+  margin: 14px 0 0;
+  min-height: 5.5em;
+  line-height: 1.6;
+}
+
+.project-card .tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.project-card .tag-list span {
+  white-space: nowrap;
+}
+
+.project-actions {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+.project-actions a,
+.project-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+}
+
+.project-status {
+  color: var(--quiet);
+  cursor: default;
+}
+
+.project-status svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.project-actions a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text);
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 180ms ease;
+}
+
+.project-actions a span {
+  display: inline-block;
+  transition: transform 180ms ease;
+}
+
+.project-actions a:hover {
+  color: var(--accent);
+}
+
+.project-actions a:hover span {
+  transform: translate(3px, -3px);
+}
+
+.project-actions a:focus-visible {
+  outline: 1px solid var(--accent);
+  outline-offset: 5px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 16px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+}
+
+/* Keep project artwork aligned with the card edges */
+.project-card .project-visual {
+  margin: -16px -16px 0;
+}
+
+/* Improve spacing before project action separator */
+.project-card .tag-list {
+  margin-bottom: 22px;
+}
+
+.project-actions {
+  padding-top: 18px;
+}
