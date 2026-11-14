@@ -504,9 +504,88 @@
       </div>
     </section>
 
+
     <section class="content-section section-shell" id="certifications">
-      <div class="section-heading"><p class="eyebrow">05 / DEVELOPMENT</p><h2>Certifications<span class="accent-text">.</span></h2></div>
-      <div class="section-body"><p class="section-lead">Courses, credentials, and milestones in continuous learning.</p><div class="placeholder-grid"><article class="placeholder-card"><span>ISSUED YEAR</span><h3>Certification name</h3><p>Issuing organization · Credential details</p></article><article class="placeholder-card"><span>ISSUED YEAR</span><h3>Certification name</h3><p>Issuing organization · Credential details</p></article></div></div>
+      <div class="section-heading">
+        <p class="eyebrow">05 / DEVELOPMENT</p>
+        <h2>Certifications<span class="accent-text">.</span></h2>
+      </div>
+
+      <div class="section-body">
+        <p class="section-lead">
+          Professional certifications, training, and credentials earned
+          through continuous learning and practical experience.
+        </p>
+
+        <div class="certification-grid">
+
+          <article class="placeholder-card certification-card">
+            <button
+              class="certificate-thumbnail certificate-preview"
+              type="button"
+              data-certificate-image="img/certifications/scrum-study.jpg"
+              data-certificate-title="Scrum Fundamentals Certified (SFC)">
+              <img src="img/certifications/scrum-study.jpg"
+                   alt="Scrum Fundamentals Certified certificate">
+            </button>
+
+            <span>AUGUST 2026</span>
+            <h3>Scrum Fundamentals Certified (SFC™)</h3>
+            <p>SCRUMstudy – Accreditation Body for Scrum and Agile</p>
+
+            <a class="certification-action"
+               href="https://www.scrumstudy.com/certification/verify?type=SFC&amp;number=1186190"
+               target="_blank" rel="noopener noreferrer">
+              Verify credential <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+
+          <article class="placeholder-card certification-card">
+            <button
+              class="certificate-thumbnail certificate-preview"
+              type="button"
+              data-certificate-image="img/certifications/internship-certificate.jpg"
+              data-certificate-title="600-Hour Software Development Internship Certificate">
+              <img src="img/certifications/internship-certificate.jpg"
+                   alt="600-hour software development internship certificate">
+            </button>
+
+            <span>MAY 2024</span>
+            <h3>600-Hour Software Development Internship Certificate</h3>
+            <p>Holy Cross Gardens / First Le Marke Resources, Inc.</p>
+
+            <button class="certification-action certificate-preview"
+                    type="button"
+                    data-certificate-image="img/certifications/internship-certificate.jpg"
+                    data-certificate-title="600-Hour Software Development Internship Certificate">
+              View certificate <span aria-hidden="true">↗</span>
+            </button>
+          </article>
+
+          <article class="placeholder-card certification-card">
+            <button
+              class="certificate-thumbnail certificate-preview"
+              type="button"
+              data-certificate-image="img/certifications/micp-basic-programming.jpg"
+              data-certificate-title="MICP – Basic Programming Certificate">
+              <img src="img/certifications/micp-basic-programming.jpg"
+                   alt="Multiple Income Creating Projects basic programming certificate">
+            </button>
+
+            <span>APRIL 2020</span>
+            <h3>Multiple Income Creating Projects (MICP) – Basic Programming</h3>
+            <p>Department of Education – Leyte Division</p>
+
+            <button class="certification-action certificate-preview"
+                    type="button"
+                    data-certificate-image="img/certifications/micp-basic-programming.jpg"
+                    data-certificate-title="MICP – Basic Programming Certificate">
+              View certificate <span aria-hidden="true">↗</span>
+            </button>
+          </article>
+
+        </div>
+      </div>
     </section>
 
     <section class="content-section section-shell" id="games">
@@ -581,6 +660,27 @@
     <p>To God be all the Glory and Honor</p><small>© 2026 RICHARD SAMBERI. ALL RIGHTS RESERVED.</small>
   </footer>
   <a class="back-to-top-floating" href="#top" aria-label="Back to top" title="Back to top">↑</a>
+
+  <dialog class="certificate-lightbox" id="certificate-lightbox">
+    <div class="certificate-lightbox-inner">
+      <div class="certificate-lightbox-header">
+        <p class="certificate-lightbox-title" id="certificate-lightbox-title">
+          Certificate
+        </p>
+        <button class="certificate-lightbox-close"
+                type="button"
+                aria-label="Close certificate viewer">
+          &times;
+        </button>
+      </div>
+
+      <img class="certificate-lightbox-image"
+           id="certificate-lightbox-image"
+           src=""
+           alt="Certificate preview">
+    </div>
+  </dialog>
+
   <script src="lenis.min.js"></script>
   <script src="script.js"></script>
 </body>

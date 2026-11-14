@@ -213,4 +213,38 @@
   desktopQuery.addEventListener?.('change', event => {
     if (event.matches) closeNav();
   });
+
+  // Certificate image viewer
+  const certificateDialog = document.querySelector('#certificate-lightbox');
+  const certificateImage = document.querySelector('#certificate-lightbox-image');
+  const certificateTitle = document.querySelector('#certificate-lightbox-title');
+  const certificateClose = document.querySelector('.certificate-lightbox-close');
+
+  document.querySelectorAll('.certificate-preview').forEach((button) => {
+    button.addEventListener('click', () => {
+      if (!certificateDialog || !certificateImage || !certificateTitle) return;
+
+      certificateImage.src = button.dataset.certificateImage;
+      certificateImage.alt = button.dataset.certificateTitle;
+      certificateTitle.textContent = button.dataset.certificateTitle;
+
+      certificateDialog.showModal();
+    });
+  });
+
+  certificateClose?.addEventListener('click', () => {
+    certificateDialog?.close();
+  });
+
+  certificateDialog?.addEventListener('click', (event) => {
+    if (event.target === certificateDialog) {
+      certificateDialog.close();
+    }
+  });
+
+  certificateDialog?.addEventListener('close', () => {
+    if (certificateImage) {
+      certificateImage.src = '';
+    }
+  });
 })();
