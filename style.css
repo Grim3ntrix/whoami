@@ -445,6 +445,38 @@ h1 {
 .timeline-item .muted,.simple-entry .muted {
   color: #77796f;
 }
+
+/* EDUCATION SECTION */
+.education-details {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.education-logo {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  object-fit: contain;
+}
+
+.education-details h3 {
+  margin-top: 0;
+}
+
+/* EDUCATION — MOBILE */
+@media (max-width: 600px) {
+  .education-details {
+    gap: 12px;
+  }
+
+  .education-logo {
+    width: 42px;
+    height: 42px;
+    flex-basis: 42px;
+  }
+}
+
 .game-placeholder {
   min-height: 175px;
   background: var(--panel);
