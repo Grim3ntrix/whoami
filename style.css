@@ -2837,3 +2837,70 @@ html[data-theme="light"] .top.is-scrolled {
   cursor: default;
   pointer-events: none;
 }
+
+/* ==========================================================================
+   PROJECT CARDS — IMAGE PREVIEWS
+   ========================================================================== */
+
+.project-visual.project-image {
+  display: block;
+  padding: 0;
+  background: var(--panel-2);
+}
+
+.project-visual.project-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: top center;
+  transition: transform 350ms ease;
+}
+
+.project-card:hover .project-visual.project-image img {
+  transform: scale(1.025);
+}
+
+/* ==========================================================================
+   PROJECT CARDS — CATEGORY CHIPS
+   ========================================================================== */
+
+.project-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 15px;
+}
+
+.project-categories span {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 11px;
+  border: 1.9px solid #E6B84A;
+  border-radius: 999px;
+  background: #292416;
+  color: #E5DFC9;
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  line-height: 1.4;
+  text-transform: uppercase;
+  box-shadow: none;
+}
+
+/* Light mode */
+html[data-theme="light"] .project-categories span {
+  border: 1.9px solid #E6B84A;
+  background: #FFF5D9;
+  color: #493824;
+  box-shadow: none;
+}
+
+.project-card .project-meta {
+  margin-top: 8px;
+}
+
+.project-card .project-meta h3 {
+  min-height: 0;
+}
