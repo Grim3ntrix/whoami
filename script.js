@@ -167,6 +167,55 @@
     if (homeSection) sectionObserver.observe(homeSection);
   }
 
+    // Scroll reveal animations.
+  if (!REDUCED_MOTION && 'IntersectionObserver' in window) {
+    const revealElements = document.querySelectorAll(
+      '.project-card, ' +
+      '.placeholder-card, ' +
+      '.skill-card, ' +
+      '.certification-card, ' +
+      '.game-card, ' +
+      '.timeline-item, ' +
+      '.education-entry'
+    );
+
+    revealElements.forEach(element => {
+      element.classList.add('reveal-on-scroll');
+
+      const siblings = [...element.parentElement.children]
+        .filter(sibling =>
+          sibling.matches(
+            '.project-card, .placeholder-card, .skill-card, ' +
+            '.certification-card, .game-card, .timeline-item, ' +
+            '.education-entry'
+          )
+        );
+
+      const index = siblings.indexOf(element);
+
+      element.style.setProperty(
+        '--reveal-delay',
+        `${index * 100}ms`
+      );
+    });
+
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+
+        entry.target.classList.add('is-revealed');
+        revealObserver.unobserve(entry.target);
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    revealElements.forEach(element => {
+      revealObserver.observe(element);
+    });
+  }
+
   // Header border and back-to-top visibility.
   function updateScrollControls(scrollPosition = window.scrollY) {
     const isScrolled = scrollPosition > 0;
